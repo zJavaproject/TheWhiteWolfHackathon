@@ -83,3 +83,17 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+
+# Server
+**/env			
+
+__pycache__/
+
+#*.sqlite3
+
+*.bak
+*.dat
+*.dir
+
+#*.coverage
