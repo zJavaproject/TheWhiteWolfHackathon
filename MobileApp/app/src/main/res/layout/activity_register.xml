@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Rejestracja"
+        android:textSize="10pt" />
+
+    <EditText
+        android:id="@+id/EditTextFirstName"
+        android:layout_height="wrap_content"
+        android:hint="Imię"
+        android:inputType="textPersonName"
+        android:layout_width="fill_parent">
+    </EditText>
+    <TextView
+        android:id="@+id/TextViewFirstNameError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Musisz podać imię!"
+        android:textColor="#9F0404"/>
+
+
+    <EditText
+        android:id="@+id/EditTextName"
+        android:layout_height="wrap_content"
+        android:hint="Nazwisko"
+        android:inputType="textPersonName"
+        android:layout_width="fill_parent">
+    </EditText>
+    <TextView
+        android:id="@+id/TextViewNameError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Musisz podać nazwisko!"
+        android:textColor="#9F0404"/>
+
+    <EditText
+        android:id="@+id/EditTextEmail"
+        android:layout_width="match_parent"
+        android:inputType="textEmailAddress"
+        android:layout_height="wrap_content"
+        android:hint="Email" />
+    <TextView
+        android:id="@+id/TextViewEmailError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Musisz podać email!"
+        android:textColor="#9F0404"/>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Telefon"/>
+
+    <EditText
+        android:id="@+id/EditTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Hasło"/>
+    <TextView
+        android:id="@+id/TextViewPasswordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Musisz podać hasło!"
+        android:textColor="#9F0404"/>
+
+    <EditText
+        android:id="@+id/EditTextPassword2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Powtórz hasło"/>
+    <TextView
+        android:id="@+id/TextViewPassword2Error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Musisz podać hasło drugi raz!"
+        android:textColor="#9F0404"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zarejestruj się"
+        android:onClick="openSignInForm"/>
+
+
+
+</LinearLayout>
