@@ -90,6 +90,8 @@ lint/tmp/
 
 Server/env/	
 
+../env/
+
 __pycache__/
 
 #*.sqlite3
