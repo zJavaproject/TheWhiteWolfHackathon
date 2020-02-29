@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".mood"-->
+<!--    android:orientation ="vertical">-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mood"
-    android:orientation ="vertical">
+    android:fillViewport="true">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
@@ -21,7 +29,8 @@
             android:id="@+id/checkBoxExcited"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Podekscytowanie" />
+            android:text="Podekscytowanie"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarExcited"
@@ -30,19 +39,22 @@
             android:layout_height="wrap_content"
             android:max="5"
             android:progress="1" />
+
         <TextView
             android:id="@+id/textExcitedNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center_horizontal"
+            android:text="1/5" />
 
 
         <CheckBox
             android:id="@+id/checkBoxBored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Znudzenie" />
+            android:text="Znudzenie"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarBored"
@@ -54,38 +66,43 @@
 
         <TextView
             android:id="@+id/textBoredNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center"
+            android:text="1/5" />
 
 
         <CheckBox
             android:id="@+id/checkBoxNervous"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Zdenerwowanie/Zestresowanie" />
+            android:text="Zdenerwowanie/Zestresowanie"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarNervous"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:max="5"
             android:progress="1" />
+
         <TextView
             android:id="@+id/textNervousNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center"
+            android:text="1/5" />
 
 
         <CheckBox
             android:id="@+id/checkBoxTired"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Zmęczenie" />
+            android:text="Zmęczenie"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarTired"
@@ -97,17 +114,19 @@
 
         <TextView
             android:id="@+id/textTiredNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center"
+            android:text="1/5" />
 
 
         <CheckBox
             android:id="@+id/checkBoxAnxiety"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Niepokój/Strach" />
+            android:text="Niepokój/Strach"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarAnxiety"
@@ -119,17 +138,19 @@
 
         <TextView
             android:id="@+id/textAnxietyNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center"
+            android:text="1/5" />
 
 
         <CheckBox
             android:id="@+id/checkBoxFrustrated"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Frustracja/Poirytowanie/Złość" />
+            android:text="Frustracja/Poirytowanie/Złość"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarFrustrated"
@@ -141,17 +162,19 @@
 
         <TextView
             android:id="@+id/textFrustratedNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center"
+            android:text="1/5" />
 
 
         <CheckBox
             android:id="@+id/checkBoxHappy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Szczęście" />
+            android:text="Szczęście"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarHappy"
@@ -163,17 +186,19 @@
 
         <TextView
             android:id="@+id/textHappyNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center"
+            android:text="1/5" />
 
 
         <CheckBox
             android:id="@+id/checkBoxSad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Smutek/Samotność" />
+            android:text="Smutek/Samotność"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarSad"
@@ -185,17 +210,19 @@
 
         <TextView
             android:id="@+id/textSadNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center"
+            android:text="1/5" />
 
 
         <CheckBox
             android:id="@+id/checkBoxCalm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spokój" />
+            android:text="Spokój"
+            android:onClick="onCheckboxClicked"/>
 
         <SeekBar
             android:id="@+id/seekBarCalm"
@@ -207,11 +234,28 @@
 
         <TextView
             android:id="@+id/textCalmNote"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBarExcited"
-            android:text="1"/>
+            android:gravity="center"
+            android:text="1/5" />
 
-    </ScrollView>
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/EditTextFeedbackBody"
+            android:layout_height="wrap_content"
+            android:hint="Komentarz"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:layout_width="fill_parent">
+        </EditText>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapisz" />
+
+
+    </LinearLayout>
+</ScrollView>
