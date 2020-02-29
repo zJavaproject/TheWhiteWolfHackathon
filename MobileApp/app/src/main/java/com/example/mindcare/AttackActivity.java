@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AttackActivity extends AppCompatActivity {
-    Button btnBreathing;
+    Button btnBreathing, btnCounting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,19 @@ public class AttackActivity extends AppCompatActivity {
         setContentView(R.layout.activity_attack);
 
         btnBreathing = findViewById(R.id.btnBreath);
+        btnCounting = findViewById(R.id.btnCounting);
         btnBreathing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent breathIntent = new Intent(AttackActivity.this, BreathingActivity.class);
                 startActivity(breathIntent);
+            }
+        });
+        btnCounting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent countingIntent = new Intent(AttackActivity.this, CountingActivity.class);
+                startActivity(countingIntent);
             }
         });
     }
