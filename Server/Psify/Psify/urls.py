@@ -19,7 +19,7 @@ from django.urls import path
 #from start.views
 
 urlpatterns = [
+    path('', include('webpage.urls')),
     url('admin/', admin.site.urls),
-    #path('', include('start.urls')),
     url(r'', include('mobile_api.urls')), 
 ]
