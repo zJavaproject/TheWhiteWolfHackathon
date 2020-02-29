@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MindCare</string>
+    <string name="jak_si_teraz_czujesz">Jak się teraz czujesz?</string>
+    <string name="atak">Atak</string>
 </resources>
