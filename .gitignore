@@ -86,7 +86,9 @@ lint/tmp/
 
 
 # Server
-**/env			
+**/env		
+
+Server/env/	
 
 __pycache__/
 
