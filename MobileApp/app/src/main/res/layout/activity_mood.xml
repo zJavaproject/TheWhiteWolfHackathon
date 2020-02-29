@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mood"
+    android:orientation ="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jak się teraz czujesz?" />
+
+
+        <CheckBox
+            android:id="@+id/checkBoxExcited"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Podekscytowanie" />
+
+        <SeekBar
+            android:id="@+id/seekBarExcited"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+        <TextView
+            android:id="@+id/textExcitedNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBoxBored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Znudzenie" />
+
+        <SeekBar
+            android:id="@+id/seekBarBored"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/textBoredNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBoxNervous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zdenerwowanie/Zestresowanie" />
+
+        <SeekBar
+            android:id="@+id/seekBarNervous"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+        <TextView
+            android:id="@+id/textNervousNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBoxTired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zmęczenie" />
+
+        <SeekBar
+            android:id="@+id/seekBarTired"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/textTiredNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBoxAnxiety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Niepokój/Strach" />
+
+        <SeekBar
+            android:id="@+id/seekBarAnxiety"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/textAnxietyNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBoxFrustrated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frustracja/Poirytowanie/Złość" />
+
+        <SeekBar
+            android:id="@+id/seekBarFrustrated"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/textFrustratedNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBoxHappy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Szczęście" />
+
+        <SeekBar
+            android:id="@+id/seekBarHappy"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/textHappyNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBoxSad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smutek/Samotność" />
+
+        <SeekBar
+            android:id="@+id/seekBarSad"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/textSadNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+
+        <CheckBox
+            android:id="@+id/checkBoxCalm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spokój" />
+
+        <SeekBar
+            android:id="@+id/seekBarCalm"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:progress="1" />
+
+        <TextView
+            android:id="@+id/textCalmNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBarExcited"
+            android:text="1"/>
+
+    </ScrollView>
+
+</LinearLayout>
