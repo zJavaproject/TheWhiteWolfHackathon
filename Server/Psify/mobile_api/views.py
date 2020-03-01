@@ -7,8 +7,15 @@ from .serializers import MoodSerializer, EventSerializer, UserSerializer
 
 
 class MoodListCreateView(generics.ListCreateAPIView):
-    queryset = Mood.objects.all()
+    #queryset = Mood.objects.all()
     serializer_class = MoodSerializer
+
+    def get_queryset(self):
+    	queryset = Mood.objects.all()
+    	id_user = self.request.query_params.get('id_user', None)
+    	if id_user is not None:
+    		queryset = queryset.filter(id_user=id_user)
+    	return queryset
 
 class EventListCreateView(generics.ListCreateAPIView):
 	queryset = Event.objects.all()
@@ -54,72 +61,46 @@ class UserSetDoctorView(generics.RetrieveAPIView):
 		User.objects.filter(id_user = id_user).update(id_doctor=id_doctor)
 		return User.objects.get(id_user=id_user)
 
-	# def get_queryset(self):
-	# 	queryset = User.objects.all()
-	# 	id_doctor = self.request.query_params.get('id_doctor', None)
-	# 	id_user = self.request.query_params.get('id_user', None)
+class UserSetNotesView(generics.RetrieveAPIView):
+	serializer_class = UserSerializer
 
-	# 	User.objects.filter(id_user = id_user).update(id_doctor=id_doctor)
-	# 	print("id_doctor:",id_doctor)
+	def get_object(self):	
+		id_user = self.request.query_params.get('id_user', None)
+		notes = self.request.query_params.get('notes', None)
+		print("new notes:", notes)
+		old_notes = User.objects.get(id_user = id_user).notes
+		print(old_notes)
+		if old_notes is None:
+			notes = notes
+		else: 
+			notes = notes + old_notes
+		User.objects.filter(id_user = id_user).update(notes=notes)
+		return User.objects.get(id_user=id_user)
 
-	# 	# user_cnt = User.objects.filter(id_user = id_user).update(id_doctor=id_doctor)
+	
+class UserSetDiagnosisView(generics.RetrieveAPIView):
+	serializer_class = UserSerializer
 
-	# 	# if user_cnt == 1:
-	# 	# 	user = User.objects.filter(id_user = id_user)
-	# 	# 	print(user)
-	# 	# 	user.id_doctor = id_doctor
-	# 	# 	print(user)
-	# 	# 	queryset = queryset.filter(id_user=id_user)
-	# 	return queryset
+	def get_object(self):	
+		id_user = self.request.query_params.get('id_user', None)
+		diagnosis = self.request.query_params.get('diagnosis', None)
+		print("new diagnosis:", diagnosis)
 
-
-
-	# if id_doctor is not None and id_user is not none:
-
-	# 	User, created = User.objects.update_or_create(
-	# 		id_user = request.data['id_user'],
-	# 		defaults = { 
-	# 					 'access_token': request.data['access_token'], 
-	# 					 'token_type': request.data['token_type'],  
-	# 					 'refresh_token': request.data['refresh_token'], 
-	# 					 'expires_in': request.data['expires_in'], 
-	# 					 'jti':  request.data['jti']
-	# 			}
-
-	# 		)
-	# 	token.save()
-
-	# 	queryset = queryset.filter(id_user=id_user)
-	# return queryset
+		User.objects.filter(id_user = id_user).update(diagnosis=diagnosis)
+		return User.objects.get(id_user=id_user)
 
 
+class UserSetAchtungView(generics.RetrieveAPIView):
+	serializer_class = UserSerializer
 
-	# def patch(self, request, id_user):
+	def get_object(self):	
+		id_user = self.request.query_params.get('id_user', None)
+		achtung = self.request.query_params.get('achtung', None)
+		print("achtung:", achtung)
 
-	# 	user = self.get_object(id_user=id_user)
-	# 	serializer = SearchSerializer(user, data=request.data, partial=True) 
+		if achtung == 'true' or achtung == 'True':
+			User.objects.filter(id_user = id_user).update(achtung=True)
+		else:
+			User.objects.filter(id_user = id_user).update(achtung=True) 
+		return User.objects.get(id_user=id_user)
 
-	# 	print("patch:",serializer.data)
-	# 	if serializer.is_valid():
-	# 		serializer.save()
-	# 		return Response(serializer.data, status=status.HTTP_201_CREATED) # status = 201
-		
-	# 	return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST) # status = 400
-
-
-# class DoctorRetrieveView(generics.RetrieveAPIView):
-	# serializer_class = DoctorSerializer
-
-# 	def retrieve(self, request, *args, **kwargs):
-# 		self.object = self.get_object()
-# 		serializer = self.get_serializer(self.object)
-# 		print(serializer)
-# 		return Response(serializer.data)
-
-
-#     def get_queryset(self):
-# 		queryset = Doctor.objects.all()
-# 		id_doctor = self.request.query_params.get('id_doctor', None)
-# 		if id_doctor is not None:
-# 			queryset = queryset.filter(id_doctor=id_doctor)
-# 		return queryset

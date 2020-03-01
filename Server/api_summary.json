@@ -13,8 +13,6 @@ localhost:8000/doctor-create POST
     "email": "Katarzyna.Nowak@gmail.com"
 }
 
-
-
 http://localhost:8000/doctor-login POST
 {
 	"email":"Katarzyna.Nowak@gmail.com",
@@ -23,9 +21,56 @@ http://localhost:8000/doctor-login POST
 200 or 404
 
 
-http://localhost:8000/patients/
+http://localhost:8000/patients/?id_doctor=1 GET
+200:
+[
+    {
+        "id_user": 1,
+        "id_doctor": 2,
+        "name": "Anna",
+        "surname": "Kowalska",
+        "phone": 666666666665,
+        "email": "annakowalska@gamil.com",
+        "password": "ahahaha",
+        "notes": null,
+        "diagnosis": null,
+        "achtung": false
+    }
+]
 
-
+http://localhost:8000/mobile_api/moods/?id_user=1 GET
+http://localhost:8000/mobile_api/moods/
+200:
+[
+    {
+        "id_user": 1,
+        "time": "1987-09-03T00:00:00Z",
+        "comment": "fwrfefew",
+        "happy": 6,
+        "sad": 6,
+        "calm": 6,
+        "excited": 6,
+        "bored": 6,
+        "nervous": 6,
+        "tired": 6,
+        "scared": 6,
+        "angry": 6
+    },
+    {
+        "id_user": 1,
+        "time": "1987-09-03T00:00:00Z",
+        "comment": "fwrfefew",
+        "happy": 6,
+        "sad": 6,
+        "calm": 6,
+        "excited": 6,
+        "bored": 6,
+        "nervous": 6,
+        "tired": 6,
+        "scared": 6,
+        "angry": 6
+    }
+]
 --------------mobile
 http://localhost:8000/mobile_api/user-create/ POST
 { 
@@ -81,3 +126,8 @@ http://localhost:8000/mobile_api/moods/ POST
     "scared": 6,
     "angry": 6
 }
+
+
+http://localhost:8000/mobile_api/user-diagnosis/?id_user=1&diagnosis=depresja GET
+http://localhost:8000/mobile_api/user-notes/?id_user=1&notes=notatki			GET
+http://localhost:8000/mobile_api/user-achtung/?id_user=1&achtung=True			GET
