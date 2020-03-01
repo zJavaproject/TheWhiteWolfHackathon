@@ -23,6 +23,7 @@ http://localhost:8000/login-doctor POST
 200 or 404
 
 
+http://localhost:8000/patients/
 
 
 --------------mobile
@@ -37,3 +38,22 @@ http://localhost:8000/mobile_api/user-create/ POST
     "notes": null,
     "achtung": false
 }
+
+201:
+{	
+	'id_user': 1, 
+	'id_doctor': None, 
+	'name': 'Anna', 
+	'surname': 'Kowalska', 
+	'phone': 666666666665, 
+	'email': 'annakowalska@gamil.com', 
+	'password': 'ahahaha', 
+	'notes': None, 
+	'diagnosis': None, 
+	'achtung': False
+}
+
+
+http://localhost:8000/mobile_api/user-update/?id_user=<id_user>&id_doctor=<id_doctor> GET
+
+http://localhost:8000/mobile_api/user-update/?id_doctor=1&id_user=1
