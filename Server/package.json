@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "webpack --mode development ./Psify/webpage/src/index.js --output ./Psify/webpage/static/webpage/main.js",
     "build": "webpack --mode production ./Psify/webpage/src/index.js --output ./Psify/webpage/static/webpage/main.js"
-  
   },
   "keywords": [],
   "author": "",
@@ -21,8 +20,10 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0"
   }
 }
