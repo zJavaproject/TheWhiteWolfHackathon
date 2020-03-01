@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -19,6 +20,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Button btnAttack;
+    ImageView ivMyProfile;
 
 
     @Override
@@ -28,14 +30,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         btnAttack = findViewById(R.id.btnAttack);
+        ivMyProfile = findViewById(R.id.ivMyProfile);
 
         btnAttack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent attackIntent = new Intent(MainActivity.this, AttackActivity.class);
                 startActivity(attackIntent);
+            }
+        });
 
-
+        ivMyProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myProfileIntent = new Intent(MainActivity.this, MyProfileActivity.class);
+                startActivity(myProfileIntent);
             }
         });
 
