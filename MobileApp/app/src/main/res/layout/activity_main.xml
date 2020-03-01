@@ -13,10 +13,25 @@
         android:layout_height="wrap_content"
         android:text="@string/atak" />
 
+
+
     <Button
-        android:id="@+id/btnAddMood"
-        android:layout_width="match_parent"
+        android:id="@+id/buttonMoodForm"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/jak_si_teraz_czujesz" />
+        android:text="Nastrój"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="178dp"
+        android:onClick="openMoodForm"/>
+
+    <Button
+    android:id="@+id/buttonLogIn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Zaloguj"
+    tools:layout_editor_absoluteX="142dp"
+    tools:layout_editor_absoluteY="178dp"
+    android:onClick="logInView"/>
 
 </LinearLayout>
+

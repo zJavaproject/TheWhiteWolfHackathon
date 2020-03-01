@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Logowanie"
+        android:textSize="10pt" />
+
+    <EditText
+        android:id="@+id/EditTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+    <TextView
+        android:id="@+id/TextViewEmailError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Musisz podać email!"
+        android:textColor="#9F0404"/>
+
+    <EditText
+        android:id="@+id/EditTextPassword"
+        android:layout_height="wrap_content"
+        android:hint="Hasło"
+        android:layout_width="fill_parent"
+        android:inputType="textPassword"/>
+    <TextView
+        android:id="@+id/TextViewPasswordError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Musisz podać haslo!"
+        android:textColor="#9F0404"/>
+
+    <Button
+        android:id="@+id/buttonMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zaloguj się"
+        android:onClick="openMain"/>
+
+    <TextView
+        android:id="@+id/EditTextRegister"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:textColor="#000F65"
+        android:text="Nie masz konta? Zarejestruj się."
+        android:focusable="true"
+        android:onClick="openRegisterForm"/>
+
+</LinearLayout>

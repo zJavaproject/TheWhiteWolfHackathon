@@ -4,26 +4,31 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.Button;
+
+import android.view.View;
+import android.widget.EditText;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
+import android.widget.TextView;
+
 
 
 public class MainActivity extends AppCompatActivity {
-    Button btnAddMood, btnAttack;
+
+    Button btnAttack;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnAddMood = findViewById(R.id.btnAddMood);
-        btnAttack = findViewById(R.id.btnAttack);
-        btnAddMood.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
+        btnAttack = findViewById(R.id.btnAttack);
+
         btnAttack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,4 +40,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    public void openMoodForm(View view) {
+        Intent intent = new Intent(this, mood.class);
+        startActivity(intent);
+
+    }
+
+    public void logInView(View view) {
+        Intent intent = new Intent(this, SignIn.class);
+        startActivity(intent);
+    }
+
 }
