@@ -89,3 +89,18 @@ class UserSetDiagnosisView(generics.RetrieveAPIView):
 		User.objects.filter(id_user = id_user).update(diagnosis=diagnosis)
 		return User.objects.get(id_user=id_user)
 
+
+class UserSetAchtungView(generics.RetrieveAPIView):
+	serializer_class = UserSerializer
+
+	def get_object(self):	
+		id_user = self.request.query_params.get('id_user', None)
+		achtung = self.request.query_params.get('achtung', None)
+		print("achtung:", achtung)
+
+		if achtung == 'true' or achtung == 'True':
+			User.objects.filter(id_user = id_user).update(achtung=True)
+		else:
+			User.objects.filter(id_user = id_user).update(achtung=True) 
+		return User.objects.get(id_user=id_user)
+
