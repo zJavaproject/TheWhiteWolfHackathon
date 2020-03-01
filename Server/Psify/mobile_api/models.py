@@ -1,9 +1,8 @@
 from django.db import models
-
 # Create your models here.
 
 class Mood(models.Model):
-	id_user = models.IntegerField(null=False) # pk
+	id_user = models.IntegerField(null=False) # pk user to pacjent
 	time	= models.DateTimeField(null=False)
 	comment = models.CharField(max_length=300, null=True)
 	happy	= models.IntegerField(default=0)
@@ -18,8 +17,20 @@ class Mood(models.Model):
 
 class Event(models.Model):
 	id_user		= models.IntegerField(null=False) 
-	time_start	= models.DateTimeField(null=False)
+	time_start	= models.DateTimeField(null=True)
 	time_end	= models.DateTimeField(null=True)
 	questions	= models.CharField(max_length=1000, null=True)
 	comment		= models.CharField(max_length=500, null=True)
 	
+class User(models.Model):
+	id_user		= models.AutoField(primary_key=True)
+	id_doctor	= models.IntegerField(null=True) #fk
+	name		= models.CharField(max_length=50)
+	surname		= models.CharField(max_length=50)
+	phone		= models.IntegerField()
+	email		= models.CharField(max_length=50)
+	password	= models.CharField(max_length=12)
+	notes		= models.CharField(max_length=3000, null=True)
+	diagnosis	= models.CharField(max_length=300, null=True)
+	achtung		= models.BooleanField(default=False)	# czy ostatnio zdarzył się atak
+
