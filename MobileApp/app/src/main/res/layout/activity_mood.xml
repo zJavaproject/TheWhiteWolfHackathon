@@ -84,7 +84,7 @@
             android:id="@+id/seekBarNervous"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:max="5"
             android:progress="1" />
 
@@ -254,7 +254,8 @@
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Zapisz" />
+            android:text="Zapisz"
+            android:onClick="submit"/>
 
 
     </LinearLayout>

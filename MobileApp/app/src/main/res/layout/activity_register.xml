@@ -58,7 +58,7 @@
         android:textColor="#9F0404"/>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
