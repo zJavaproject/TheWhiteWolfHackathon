@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
-    android:background="@color/colorPrimaryLight"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -21,36 +21,40 @@
 
     <Button
         android:id="@+id/btnAttack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="331dp"
+        android:layout_height="181dp"
         android:layout_marginLeft="15dp"
         android:background="@color/colorPrimary"
-        android:text="@string/atak" />
+        android:gravity="center"
+        android:text="@string/atak"
+        android:textSize="24sp" />
 
 
     <Button
         android:id="@+id/buttonMoodForm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="332dp"
+        android:layout_height="80dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
         android:background="@color/colorPrimary"
         android:onClick="openMoodForm"
         android:text="Jakie jest twoje samopoczucie?"
+        android:textSize="18sp"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="178dp" />
 
-    <Button
-        android:id="@+id/buttonLogIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginTop="350dp"
-        android:layout_marginRight="15dp"
-        android:background="@color/colorPrimary"
-        android:onClick="logInView"
-        android:text="Zmień użytkownika"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="178dp" />
+<!--    <Button-->
+<!--        android:id="@+id/buttonLogIn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|right"-->
+<!--        android:layout_marginTop="150dp"-->
+<!--        android:layout_marginRight="15dp"-->
+<!--        android:background="@color/colorPrimary"-->
+<!--        android:onClick="logInView"-->
+<!--        android:text="Zmień użytkownika"-->
+<!--        tools:layout_editor_absoluteX="142dp"-->
+<!--        tools:layout_editor_absoluteY="178dp" />-->
 
 </LinearLayout>
 
