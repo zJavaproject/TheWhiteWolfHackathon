@@ -1,6 +1,6 @@
 import React, {Component, TextField} from 'react';
 
-class LoginForm extends Component {
+class Form extends Component {
     validateForms() {
         window.addEventListener('load', function() {
             var forms = document.getElementsByClassName('needs-validation');
@@ -43,4 +43,4 @@ class LoginForm extends Component {
     }
 }
 
-export default LoginForm
+export default Form
