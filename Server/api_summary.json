@@ -3,15 +3,26 @@ http://localhost:8000/patients?id_doctor=<id_doctor> GET
 
 localhost:8000/create-doctor POST
 {
-    "id_doctor": 1,
     "name": "Katarzyna",
     "surname": "Nowak",
     "phone": 456789456,
     "adress": "ul.Nowa 45c Kraków",
     "certify": "ax3s5ce4vr5f7btgyn7h9uj",
+	"profession": "Psycholog",
     "password": "qwerty",
     "email": "Katarzyna.Nowak@gmail.com"
 }
+
+
+
+http://localhost:8000/login-doctor POST
+{
+	"email":"Katarzyna.Nowak@gmail.com",
+	"password":"qwerty"
+}
+200 or 404
+
+
 
 
 --------------mobile

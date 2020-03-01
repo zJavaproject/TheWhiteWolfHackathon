@@ -21,5 +21,6 @@ from django.urls import path
 urlpatterns = [
     path('', include('webpage.urls')),
     url('admin/', admin.site.urls),
-    url(r'', include('mobile_api.urls')), 
+    url(r'mobile_api/', include('mobile_api.urls')), 
+    url(r'', include('web_api.urls'))
 ]

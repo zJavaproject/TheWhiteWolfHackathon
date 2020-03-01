@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'webpage',
     'rest_framework',   
     'mobile_api',
+    'web_api'
 ]
 
 MIDDLEWARE = [
