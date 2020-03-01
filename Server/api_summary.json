@@ -1,0 +1,28 @@
+--------------web
+http://localhost:8000/patients?id_doctor=<id_doctor> GET
+
+localhost:8000/create-doctor POST
+{
+    "id_doctor": 1,
+    "name": "Katarzyna",
+    "surname": "Nowak",
+    "phone": 456789456,
+    "adress": "ul.Nowa 45c Kraków",
+    "certify": "ax3s5ce4vr5f7btgyn7h9uj",
+    "password": "qwerty",
+    "email": "Katarzyna.Nowak@gmail.com"
+}
+
+
+--------------mobile
+http://localhost:8000/mobile_api/user-create/ POST
+{ 
+    "name": "Anna",
+    "surname": "Kowalska",
+    "phone": 666666666665,
+    "email": "annakowalska@gamil.com",
+    "password": "ahahaha",
+	"id_doctor": 3,
+    "notes": null,
+    "achtung": false
+}
