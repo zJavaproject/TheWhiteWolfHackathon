@@ -17,8 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AttackActivity extends AppCompatActivity {
-    Button btnCounting;
-    ImageButton btnBreathing;
+    ImageButton btnBreathing, btnCounting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
