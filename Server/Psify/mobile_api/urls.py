@@ -1,5 +1,5 @@
 from django.urls import path, include 
-from .views import MoodListCreateView
+from .views import MoodListCreateView, UserCreateView
 #from rest_framework import routers
 from django.conf.urls import url
 
@@ -8,5 +8,7 @@ from django.conf.urls import url
 
 urlpatterns = [
 	#path('', include(router.urls))
-	url(r'^moods/$', MoodListCreateView.as_view(), name='moods')
+	url(r'^moods/$', MoodListCreateView.as_view(), name='moods'),
+	url(r'^user-create/$', UserCreateView.as_view(), name='user-create')
+	
 ]
