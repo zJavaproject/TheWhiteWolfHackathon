@@ -12,11 +12,13 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Transformation;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AttackActivity extends AppCompatActivity {
-    Button btnBreathing, btnCounting;
+    Button btnCounting;
+    ImageButton btnBreathing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

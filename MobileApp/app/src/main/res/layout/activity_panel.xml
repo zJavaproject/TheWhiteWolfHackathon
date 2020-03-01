@@ -3,35 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/colorPrimaryLight"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivMyProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right|top|end"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/my_account"
+        tools:ignore="VectorDrawableCompat" />
 
     <Button
         android:id="@+id/btnAttack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:background="@color/colorPrimary"
         android:text="@string/atak" />
-
 
 
     <Button
         android:id="@+id/buttonMoodForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nastrój"
+        android:layout_marginLeft="15dp"
+        android:background="@color/colorPrimary"
+        android:onClick="openMoodForm"
+        android:text="Jakie jest twoje samopoczucie?"
         tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="178dp"
-        android:onClick="openMoodForm"/>
+        tools:layout_editor_absoluteY="178dp" />
 
     <Button
         android:id="@+id/buttonLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zaloguj"
+        android:layout_gravity="bottom|right"
+        android:layout_marginTop="350dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/colorPrimary"
+        android:onClick="logInView"
+        android:text="Zmień użytkownika"
         tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="178dp"
-        android:onClick="logInView"/>
+        tools:layout_editor_absoluteY="178dp" />
 
 </LinearLayout>
 
