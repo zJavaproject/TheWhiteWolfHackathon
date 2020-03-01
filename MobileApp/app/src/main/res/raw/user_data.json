@@ -1,0 +1,10 @@
+{"name": "Adam",
+  "id_user": 3,
+  "achtung": "False",
+  "phone": 123456789,
+  "email": "asdf@wp.pl",
+  "password": "aa",
+  "id_doctor": "None",
+  "diagnosis": "None",
+  "notes": "None",
+  "surname": "Przykład"}

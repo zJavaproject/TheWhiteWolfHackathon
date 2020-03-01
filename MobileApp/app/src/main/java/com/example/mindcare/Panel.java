@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class Panel extends AppCompatActivity {
 
     Button btnAttack;
+    ImageView ivMyProfile;
 
 
     @Override
@@ -23,14 +25,23 @@ public class Panel extends AppCompatActivity {
             StrictMode.setThreadPolicy(policy);
         }
         btnAttack = findViewById(R.id.btnAttack);
+        ivMyProfile = findViewById(R.id.ivMyProfile);
 
         btnAttack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent attackIntent = new Intent(Panel.this, AttackActivity.class);
-                startActivity(attackIntent);
+                Intent attackActivity = new Intent(Panel.this, AttackActivity.class);
+                startActivity(attackActivity);
 
 
+            }
+        });
+
+        ivMyProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profileIntent = new Intent(Panel.this, UserViewActivity.class);
+                startActivity(profileIntent);
             }
         });
 
