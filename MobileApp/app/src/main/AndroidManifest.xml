@@ -9,14 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-      
-        <activity android:name=".CountingActivity"></activity>
+        <activity android:name=".Panel"></activity>
+        <activity android:name=".CountingActivity" />
         <activity android:name=".BreathingActivity" />
         <activity android:name=".AttackActivity" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".Register" />
         <activity android:name=".SignIn" />
         <activity android:name=".mood" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

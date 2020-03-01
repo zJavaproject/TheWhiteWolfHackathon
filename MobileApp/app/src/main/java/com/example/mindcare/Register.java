@@ -80,7 +80,7 @@ public class Register extends AppCompatActivity {
                 nameError.setVisibility(View.GONE);
             }
         }else {
-            Intent intent = new Intent(this, SignIn.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
     }
