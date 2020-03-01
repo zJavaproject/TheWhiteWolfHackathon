@@ -4,9 +4,9 @@ import Table from 'react-bootstrap/Table';
 class PatientInfo extends Component {
     render() {
         return (
-            <div style={{ position: 'fixed', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: '1200px' }}>
-                <h1>Jan Kowalski</h1>
-                <p>
+            <div style={{ position: 'relative', left: '50%', top: '40%', transform: 'translate(-50%, -50%)', width: '75%', display: 'flex' }}>
+                <p>    
+                    <h1>Jan Kowalski</h1>
                     <span>Numer telefonu: 666 666 666<br /> </span>
                     <span>Email: jan.kowalski@kowal.pl<br /> </span>
                     <span>Diagnoza: Agorafobia<br /></span>
