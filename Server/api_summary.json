@@ -1,7 +1,7 @@
 --------------web
 http://localhost:8000/patients?id_doctor=<id_doctor> GET
 
-localhost:8000/create-doctor POST
+localhost:8000/doctor-create POST
 {
     "name": "Katarzyna",
     "surname": "Nowak",
@@ -15,7 +15,7 @@ localhost:8000/create-doctor POST
 
 
 
-http://localhost:8000/login-doctor POST
+http://localhost:8000/doctor-login POST
 {
 	"email":"Katarzyna.Nowak@gmail.com",
 	"password":"qwerty"
@@ -54,6 +54,30 @@ http://localhost:8000/mobile_api/user-create/ POST
 }
 
 
-http://localhost:8000/mobile_api/user-update/?id_user=<id_user>&id_doctor=<id_doctor> GET
+http://localhost:8000/mobile_api/user-login POST
+{
+	"email":"Katarzyna.Nowak@gmail.com",
+	"password":"qwerty"
+}
+200 or 404
 
+
+http://localhost:8000/mobile_api/user-update/?id_user=<id_user>&id_doctor=<id_doctor> GET
 http://localhost:8000/mobile_api/user-update/?id_doctor=1&id_user=1
+
+
+http://localhost:8000/mobile_api/moods/ POST
+{
+    "id_user": 1,
+    "time": "1987-09-03 00:00:00Z",
+    "comment": "fwrfefew",
+    "happy": 6,
+    "sad": 6,
+    "calm": 6,
+    "excited": 6,
+    "bored": 6,
+    "nervous": 6,
+    "tired": 6,
+    "scared": 6,
+    "angry": 6
+}

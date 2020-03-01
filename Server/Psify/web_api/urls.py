@@ -10,6 +10,6 @@ from web_api.views import UserListView, DoctorCreateView, DoctorLoginView
 urlpatterns = [
 	#path('', include(router.urls))
 	url(r'^patients/$', UserListView.as_view(), name='patients'),
-	url(r'^create-doctor$', DoctorCreateView.as_view(), name='create-doctor'),
-	url(r'^login-doctor$', DoctorLoginView.as_view(), name='login-doctor'),
+	url(r'^doctor-create/$', DoctorCreateView.as_view(), name='doctor-create'),
+	url(r'^doctor-login/$', DoctorLoginView.as_view(), name='doctor-login'),
 ]
