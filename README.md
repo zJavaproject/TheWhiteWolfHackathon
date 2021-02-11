@@ -1,4 +1,4 @@
-# MindCare
+# MindCare - The White Wolf Hackathon 2020
 Application created during The White Wolf Hackathon :wolf: on 02/29/2020-03/01/2020
 
 # About 
